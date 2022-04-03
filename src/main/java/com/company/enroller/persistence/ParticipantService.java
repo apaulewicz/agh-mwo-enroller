@@ -22,4 +22,9 @@ public class ParticipantService {
 		return query.list();
 	}
 
+	public Participant findByLogin(String login){
+		return (Participant) connector.getSession().get(Participant.class, login);
+
+	}
+
 }
